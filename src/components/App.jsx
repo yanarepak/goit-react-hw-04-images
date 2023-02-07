@@ -15,7 +15,7 @@ export const App = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    if(!query){
+    if (!query) {
       return;
     }
     setIsLoading(true);
@@ -29,6 +29,7 @@ export const App = () => {
       setTotalHits(data.totalHits);
       setIsLoading(false);
     });
+    // eslint-disable-next-line
   }, [query, page]);
 
   const handleFormSubmit = name => {
@@ -36,7 +37,7 @@ export const App = () => {
   };
 
   const onLoadMore = () => {
-    return setPage(page => page + 1)
+    return setPage(page => page + 1);
   };
 
   return (
