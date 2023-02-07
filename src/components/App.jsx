@@ -33,7 +33,10 @@ export const App = () => {
   }, [query, page]);
 
   const handleFormSubmit = name => {
-    return setQuery(name), setPage(1), setImages([]), setTotalHits(0);
+    setQuery(name);
+    setPage(1);
+     setImages([]);
+    setTotalHits(0);
   };
 
   const onLoadMore = () => {
